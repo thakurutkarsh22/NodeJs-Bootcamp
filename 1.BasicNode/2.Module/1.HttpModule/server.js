@@ -2,10 +2,16 @@ const http = require("node:http");
 
 const server = http.createServer((req, res) => {
   const url = req.url;
+  const method = req.method; // get, put, post, delete..
   console.log("ACCEPTING REQUEST FOR ", url);
 
   if (url === "/") {
-    res.end("WELCOME TO HOMEPAGE");
+    if (method === "GET") {
+      res.end("WELCOME TO HOMEPAGE");
+    } else {
+      res.statusCode = 404;
+      res.end("cannot /" + method);
+    }
   } else if (url === "/fitness") {
     res.write("nice you like fitness");
     res.end("\nWELCOME TO FITNESS");
@@ -43,5 +49,10 @@ server.listen(8080, () => {
 
     REQUEST OBJECT
     1.  it contains URL, METHOD and other things.
+
+
+    PROBLEMS WITH NODEJS server: 
+    1.  Management of ROUTING. 
+    2. COde structure.
 
 */
