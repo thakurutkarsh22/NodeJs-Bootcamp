@@ -4,6 +4,7 @@
   "description": "class notes for node",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon ./2.ExpressServerIntro/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -11,5 +12,11 @@
     "project"
   ],
   "author": "utkarsh",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.2"
+  }
 }
