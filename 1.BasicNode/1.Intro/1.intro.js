@@ -20,3 +20,11 @@ console.log("2");
 // NOTE: the callback in node js is USUALLY error first CALLBACKS
 
 // TODO: Buffer
+
+// --------------- PROCESS  -----------------------
+
+// a process is something that works on top of your CPU. (See the diagram process.png).
+
+// process is a global object that will get me the access of that object in JS.
+
+// process
