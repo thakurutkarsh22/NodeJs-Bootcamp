@@ -1,10 +1,7 @@
 const express = require("express");
+const { supplyHome } = require("../controllers/home.controller");
 const router = express.Router();
 
-router.get("/home", (req, res) => {
-  res.json({
-    message: "everything is nice",
-  });
-});
+router.get("/home", supplyHome);
 
 module.exports = router;
