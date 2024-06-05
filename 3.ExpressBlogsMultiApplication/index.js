@@ -8,13 +8,16 @@ const server = express();
 const mongoose = require("mongoose");
 const dotEnv = require("dotenv");
 const userRoute = require("./routes/user.routes");
+const cors = require("cors");
 
 // ------- MIDDLEWARES -------
 dotEnv.config();
+server.use(express.json());
+server.use(cors()); // this is for When you deploy
 
 // // -------- ROUTES REGISTRATION -------
 
-server.use("/api/v1", userRoute);
+server.use("/api/v1/user", userRoute);
 
 // --------- DATABASE CONNECTION --------
 

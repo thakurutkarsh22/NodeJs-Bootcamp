@@ -51,7 +51,8 @@ server.get("/sport/:id", (req, res) => {
 
 server.post("/register/", (req, res) => {
   const body = req.body;
-
+  const url = req.url;
+  const method = req.method;
   const { name } = body;
 
   res.end("REGISTERED SUCCESSFULLY ::: WELCOME " + name);

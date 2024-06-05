@@ -7,6 +7,11 @@ const blogSchema = new Schema({
   tags: { type: [String], default: ["general"] },
   upvote: { type: Number },
   downvote: { type: Number },
+
+  author: {
+    type: Schema.Types.ObjectId,
+    ref: "User",
+  },
 });
 
 // Blog collection you follow blogSchema.
